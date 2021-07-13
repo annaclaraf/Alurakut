@@ -71,7 +71,7 @@ export default function Home() {
               const comunidade = {
                 id: new Date().toISOString(),
                 title: dadosDoForm.get('title'),
-                image: dadosDoForm.get('image')
+                image: dadosDoForm.get('image') || `https://picsum.photos/300?${new Date()}`
               }
 
               const comunidadesAtualizadas = [...comunidades, comunidade]
