@@ -98,7 +98,7 @@ export default function Home() {
             <h2 className="smallTitle">Comunidades ({comunidades.length})</h2>
 
             <ul>
-              {comunidades.map((itemAtual) => {
+              {comunidades.slice(0, 6).map((itemAtual) => {
                 return (
                   <li key={itemAtual.id}>
                     <a href={`/user/${itemAtual.title}`}>
