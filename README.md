@@ -2,4 +2,4 @@
 
 ## Deploy 
 
-[Alurakut Anna]('https://alurakut-anna.vercel.app/)
+[Alurakut Anna](https://alurakut-anna.vercel.app/)
