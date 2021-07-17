@@ -57,7 +57,8 @@ AlurakutMenu.Wrapper = styled.header`
   background-color: #308BC5;
   .alurakutMenuProfileSidebar {
     background: white;
-    position: fixed;
+    position: absolute;
+    height: fit-content;
     z-index: 100;
     padding: 46px;
     bottom: 0;
