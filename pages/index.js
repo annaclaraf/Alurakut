@@ -104,7 +104,7 @@ export default function Home(props) {
               Bem-vindo(a)
             </h1>
 
-            <OrkutNostalgicIconSet/>
+            <OrkutNostalgicIconSet recados = {15} fotos={37} videos={5} fas={seguidores.length} mensagens={7}/>
           </Box>
 
           <Box>
