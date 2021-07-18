@@ -352,6 +352,7 @@ const AlurakutLoginScreen = css`
               "logoArea formArea"
               "logoArea formArea"
               "footerArea footerArea";
+      margin-top: 6rem;
     }
     .logoArea {
       grid-area: logoArea;

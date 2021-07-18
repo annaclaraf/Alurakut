@@ -56,7 +56,7 @@ export default function Home(props) {
 
   React.useEffect(() => {
     //API github
-    fetch('https://api.github.com/users/annaclaraf/followers')
+    fetch(`https://api.github.com/users/${githubUser}/followers`)
     .then((respostaDoServidor) => {
       return respostaDoServidor.json();
     })
