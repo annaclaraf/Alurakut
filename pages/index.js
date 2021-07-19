@@ -54,15 +54,27 @@ export default function Home(props) {
 
   const [seguidores, setSeguidores] = React.useState([])
 
+  const [seguindo, setSeguindo] = React.useState([])
+
   React.useEffect(() => {
     //API github
+    //seguidores
     fetch(`https://api.github.com/users/${githubUser}/followers`)
     .then((respostaDoServidor) => {
       return respostaDoServidor.json();
     })
     .then((respostaCompleta) => {
       setSeguidores(respostaCompleta);
+    });
+
+    //seguindo
+    fetch(`https://api.github.com/users/${githubUser}/following`)
+    .then((respostaDoServidor) => {
+      return respostaDoServidor.json();
     })
+    .then((respostaCompleta) => {
+      setSeguindo(respostaCompleta);
+    });
 
     //API datocms graphQL
     fetch('https://graphql.datocms.com/', { 
@@ -158,6 +170,7 @@ export default function Home(props) {
 
         <div className="profileRelationsArea" style={{ gridArea: 'profileRelationsArea'}}>
           <ProfileRelationsBox title='Seguidores' items={seguidores}/>
+          <ProfileRelationsBox title='Seguindo' items={seguindo}/>
           <ProfileRelationsBoxWrapper>
             <h2 className="smallTitle">Comunidades ({comunidades.length})</h2>
 
